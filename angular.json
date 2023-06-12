@@ -27,7 +27,7 @@
               "src/assets",
               {
                 "glob": "**/*",
-                "input": "external/tabler-ngx/assets/tabler",
+                "input": "external/tabler-ngx/projects/tabler-ngx/assets/tabler",
                 "output": "/assets/"
               }
             ],

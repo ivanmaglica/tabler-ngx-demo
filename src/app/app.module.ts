@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { TablerLibModule } from 'external/tabler-ngx/src/lib/tabler-ngx.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,10 +15,10 @@ import { Design2Component } from './design/design2/design2.component';
 import { NavbarOverlapDesignComponent } from './design/shells/navbar-overlap-design/navbar-overlap-design.component';
 import { VerticalDesignComponent } from './design/shells/vertical-design/vertical-design.component';
 import { VerticalTransparentDesignComponent } from './design/shells/vertical-transparent-design/vertical-transparent-design.component';
-import { NavbarOverlapModule } from 'external/tabler-ngx/src/lib/shells/navbar-overlap/navbar-overlap.module';
-import { VerticalShellModule } from 'external/tabler-ngx/src/lib/shells/vertical-shell/vertical-shell.module';
-import { CommonComponentsModule } from 'external/tabler-ngx/src/lib/components/common-components.module';
-import { ExeutorService } from 'external/executor-ng/src/public-api';
+import { TablerNgxModule } from 'external/tabler-ngx/projects/tabler-ngx/src/lib/tabler-ngx.module';
+import { CommonComponentsModule } from 'external/tabler-ngx/projects/tabler-ngx/src/lib/components/common-components.module';
+import { NavbarOverlapModule } from 'external/tabler-ngx/projects/tabler-ngx/src/lib/shells/navbar-overlap/navbar-overlap.module';
+import { VerticalShellModule } from 'external/tabler-ngx/projects/tabler-ngx/src/lib/shells/vertical-shell/vertical-shell.module';
 // import { NavbarOverlapComponent } from './shells/navbar-overlap/navbar-overlap.component';
 
 
@@ -39,7 +38,7 @@ import { ExeutorService } from 'external/executor-ng/src/public-api';
     AppRoutingModule,
     HttpClientModule,
 
-    TablerLibModule,
+    TablerNgxModule,
     CommonComponentsModule,
     NavbarOverlapModule,
     VerticalShellModule,
@@ -49,7 +48,6 @@ import { ExeutorService } from 'external/executor-ng/src/public-api';
     AppService,
     GlobalEventsActions,
     FolderApiService,
-    ExeutorService,
   ],
   bootstrap: [AppComponent]
 })

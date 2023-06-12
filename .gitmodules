@@ -1,0 +1,3 @@
+[submodule "tabler-ngx"]
+    path = external/tabler-ngx
+    url = https://github.com/ivanmaglica/tabler-ngx.git
