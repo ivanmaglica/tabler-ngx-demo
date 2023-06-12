@@ -4,9 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BasicComponent } from './templates/basic/basic.component';
 import { AppService } from './services/app.service';
-import { FolderApiService } from './services/folder.service';
 import { HttpClientModule } from '@angular/common/http';
 import { GlobalEventsActions } from './services/globals.service';
 import { Design1Component } from './design/design1/design1.component';
@@ -25,7 +23,6 @@ import { VerticalShellModule } from 'external/tabler-ngx/projects/tabler-ngx/src
 @NgModule({
   declarations: [
     AppComponent,
-    BasicComponent,
     Design1Component,
     Design2Component,
     NavbarOverlapDesignComponent,
@@ -47,7 +44,6 @@ import { VerticalShellModule } from 'external/tabler-ngx/projects/tabler-ngx/src
   providers: [
     AppService,
     GlobalEventsActions,
-    FolderApiService,
   ],
   bootstrap: [AppComponent]
 })
