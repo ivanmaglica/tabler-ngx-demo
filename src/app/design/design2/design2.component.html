@@ -1,0 +1,14 @@
+<ng-template #menu>
+  <tbl-default-menu/>
+</ng-template>
+<ng-template #body>
+  <!-- <tbl-default-page-header/> -->
+  <div class="card">
+    <div class="card-body">
+    </div>
+  </div>
+</ng-template>
+<ng-template #footer>
+  <tbl-default-content-footer></tbl-default-content-footer>
+</ng-template>
+<tbl-navbar-overlap-shell [body]="body" [menu]="menu" [footer]="footer"></tbl-navbar-overlap-shell>

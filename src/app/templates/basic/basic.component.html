@@ -1,0 +1,35 @@
+<p>basic works!</p>
+<button (click)="onClick()">API</button>
+<ul>
+  <li>meta:</li>
+  <ng-container *ngIf="folder.meta | async as meta">
+    <li>{{ meta.name }}</li>
+    <li>{{ meta.path }}</li>
+
+    <li>
+      <hr>
+    </li>
+
+    <li>
+      <a [routerLink]="getRouterParentLink('..')">
+        ..
+      </a>
+    </li>
+
+    <ng-container *ngFor="let folderName of meta.folders">
+      <li>
+        <a [routerLink]="getRouterLink(folderName)">
+          {{ folderName }}
+        </a>
+      </li>
+    </ng-container>
+
+    <li>
+      <hr>
+    </li>
+    
+    <ng-container *ngFor="let file of meta.files">
+      <li>{{ file }}</li>
+    </ng-container>
+  </ng-container>
+</ul>
