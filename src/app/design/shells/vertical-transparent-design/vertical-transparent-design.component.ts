@@ -6,5 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./vertical-transparent-design.component.css']
 })
 export class VerticalTransparentDesignComponent {
-
+  public onNewViewClick() {
+    
+  }
 }

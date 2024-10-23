@@ -1,1 +1,89 @@
-<p>vertical-transparent-design works!</p>
+<tbl-vertical-shell>
+
+  <!-- <tbl-left-vertical-sidebar sidebar [menu]="sideMenu" [logoUrl]="'./assets/static/logo-white.svg'" /> -->
+  <ng-container sidebar>
+  
+    <tbl-sidebar>
+      <tbl-sidebar-item>
+        Home
+      </tbl-sidebar-item>
+      <tbl-sidebar-sub [opened]="true">
+        <span label>Interface</span>
+        <tbl-sidebar-sub-item>
+          test
+        </tbl-sidebar-sub-item>
+        <tbl-sidebar-drop-end>
+          <span label>Cards</span>
+          <tbl-sidebar-sub-item>
+            test
+          </tbl-sidebar-sub-item>
+          <tbl-sidebar-sub-item>
+            test
+          </tbl-sidebar-sub-item>
+        </tbl-sidebar-drop-end>
+      </tbl-sidebar-sub>
+    </tbl-sidebar>
+  </ng-container>
+  <!-- <tbl-sidebar sidebar></tbl-sidebar> -->
+
+  <header topmenu class="navbar-expand-md">
+    <tbl-top-sub-menu [transparent]="true">
+      <tbl-menu-item>
+        test
+      </tbl-menu-item>
+      <tbl-menu-dropdown>
+        <span label>test</span>
+        <tbl-dropdown-item>
+          test
+        </tbl-dropdown-item>
+        <tbl-dropdown-item>
+          test
+        </tbl-dropdown-item>
+        <tbl-dropdown-item>
+          test
+        </tbl-dropdown-item>
+      </tbl-menu-dropdown>
+    </tbl-top-sub-menu>
+  </header>
+
+  <tbl-page-header pageheader>
+    <div class="btn-list">
+      <span class="d-none d-sm-inline">
+        <button class="btn"
+          (click)="onNewViewClick()">
+          New view
+        </button>
+      </span>
+      <a href="#" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal"
+        data-bs-target="#modal-report">
+        <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M12 5l0 14" />
+          <path d="M5 12l14 0" />
+        </svg>
+        Create new report
+      </a>
+      <a href="#" class="btn btn-primary d-sm-none btn-icon" data-bs-toggle="modal" data-bs-target="#modal-report"
+        aria-label="Create new report">
+        <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M12 5l0 14" />
+          <path d="M5 12l14 0" />
+        </svg>
+      </a>
+    </div>
+  </tbl-page-header>
+
+  <div class="col-sm-12 col-lg-12">
+    <div class="card card-sm">
+      <div class="card-body">
+        test
+      </div>
+    </div>
+  </div>
+
+</tbl-vertical-shell>
