@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppService } from './services/app.service';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { GlobalEventsActions } from './services/globals.service';
 import { Design1Component } from './design/design1/design1.component';
 
@@ -20,31 +20,23 @@ import { VerticalShellModule } from 'external/tabler-ngx/projects/tabler-ngx/src
 // import { NavbarOverlapComponent } from './shells/navbar-overlap/navbar-overlap.component';
 
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    Design1Component,
-    Design2Component,
-    NavbarOverlapDesignComponent,
-    VerticalDesignComponent,
-    VerticalTransparentDesignComponent,
-    // NavbarOverlapComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-
-    TablerNgxModule,
-    CommonComponentsModule,
-    NavbarOverlapModule,
-    VerticalShellModule,
-    
-  ],
-  providers: [
-    AppService,
-    GlobalEventsActions,
-  ],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        Design1Component,
+        Design2Component,
+        NavbarOverlapDesignComponent,
+        VerticalDesignComponent,
+        VerticalTransparentDesignComponent,
+        // NavbarOverlapComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        TablerNgxModule,
+        CommonComponentsModule,
+        NavbarOverlapModule,
+        VerticalShellModule], providers: [
+        AppService,
+        GlobalEventsActions,
+        provideHttpClient(withInterceptorsFromDi()),
+    ] })
 export class AppModule { }
